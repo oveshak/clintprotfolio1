@@ -44,3 +44,21 @@ class ExperienceandEducationResume(models.Model):
     exprence=models.ManyToManyField(ExperienceandEducation)
     def __str__(self):
         return f"{self.type}"
+    
+class Skill(models.Model):
+    TYPE_CHOICES=(
+        ("Personal","Personal"),
+        ("Professional","Professional")
+    )
+    type= models.CharField(max_length=40,choices=TYPE_CHOICES)
+    title=models.CharField(max_length=30)
+    parsentage=models.IntegerField()
+    def __str__(self):
+        return f"{self.type}"
+    
+class SkillResume(models.Model):
+    title=models.CharField(max_length=30)
+    desc=models.TextField()
+    skill=models.ManyToManyField(Skill)
+    def __str__(self):
+        return f"{self.title}"

@@ -73,10 +73,7 @@
               </div>
               <div class="col-md-4 col-sm-12 col-xs-12">
                 <div class="intro-image">
-                  <img
-                    src="{{hero.image.url}}"
-                    alt=""
-                  />
+                  <img src="{{hero.image.url}}" alt="" />
                 </div>
               </div>
             </div>
@@ -99,9 +96,7 @@
                 </div>
                 <div class="content">
                   <h2>{{about.title}}</h2>
-                  <p>
-                    {{about.desc}}
-                  </p>
+                  <p>{{about.desc}}</p>
                 </div>
               </div>
             </div>
@@ -117,194 +112,181 @@
     <!-- resume -->
     <div id="resume" class="resume segments">
       <div class="container">
-          <div class="box-content">
-              <div class="section-title">
-                  <h3>My Resume</h3>
-              </div>
-              <div class="owl-carousel owl-theme">
-                  <div class="content">
-                      <!-- my experience -->
-                      <div class="row ">
-                          <div class="col-md-6 col-sm-12 col-xs-12">
-                              <div class="content-left">
-                                  <div class="title-resume">
-                                      <h3>{{experiences.type}}</h3>
-                                      <h2>{{experiences.desc}}</h2>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col-md-6 col-sm-12 col-xs-12">
-                              <div class="content-right">
-                                  <ul class="timeline">
-                                      
-                                      {% for work in experiences.exprence.all %}
-                                      <li>
-                                        <h4>{{work.in_name}}</h4>
-                                        <span>{{work.position}} ({{work.date}})</span>
-                                      </li>
-                                      {% endfor %}
-                                  </ul>
-                              </div>
-                          </div>
-                      </div>
-                      <!-- end my experience -->
-                  </div>
-                  <div class="content">
-                      <!-- my education -->
-                      <div class="row ">
-                          <div class="col-md-6 col-sm-12 col-xs-12">
-                              <div class="content-left">
-                                  <div class="title-resume">
-                                      <h3>{{educations.type}}</h3>
-                                      <h2>{{educations.desc}}</h2>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col-md-6 col-sm-12 col-xs-12">
-                              <div class="content-right">
-                                  <ul class="timeline">
-                                     
-                                      {% for work in educations.exprence.all %}
-                                      <li>
-                                        <h4>{{work.in_name}}</h4>
-                                        <span>{{work.position}} ({{work.date}})</span>
-                                    </li>
-                                      {% endfor %}
-                                  </ul>
-                              </div>
-                          </div>
-                      </div>
-                      <!-- end my education -->
-                  </div>
-                  <div class="content">
-                      <!-- my skill -->
-                      <div class="my-skill">
-                          <div class="row ">
-                              <div class="col-md-6 col-sm-12 col-xs-12">
-                                  <div class="content-left">
-                                      <div class="title-resume">
-                                          <h3>Skill</h3>
-                                          <h2>With good <span>Personal</span> and <span>Professional Skills</span></h2>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="col-md-6 col-sm-12 col-xs-12">
-                                  <div class="content-right">
-                                      <div id="accordionSkill" class="accordion">
-                                          <div class="card">
-                                              <div id="personalSkill" class="card-header">
-                                                  <h2>
-                                                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                                                          <i class="fas fa-circle"></i>Personal Skill
-                                                      </button>
-                                                  </h2>
-                                              </div>
-
-                                              <div id="collapse1" class="collapse collapse-show" aria-labelledby="personalSkill" data-parent="#accordionSkill">
-                                                  <div class="card-body">
-                                                      <ul class="personalSkill">
-                                                          <li>
-                                                              <div class="skill-title">
-                                                                  <span>Creativity</span>
-                                                              </div>
-                                                              <div class="progress">
-                                                                  <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%"></div>
-                                                              </div>
-                                                          </li>
-                                                          <li>
-                                                              <div class="skill-title">
-                                                                  <span>Innovation</span>
-                                                              </div>
-                                                              <div class="progress">
-                                                                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
-                                                              </div>
-                                                          </li>
-                                                          <li>
-                                                              <div class="skill-title">
-                                                                  <span>Communication</span>
-                                                              </div>
-                                                              <div class="progress">
-                                                                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%"></div>
-                                                              </div>
-                                                          </li>
-                                                          <li>
-                                                              <div class="skill-title">
-                                                                  <span>Teamwork</span>
-                                                              </div>
-                                                              <div class="progress">
-                                                                  <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%"></div>
-                                                              </div>
-                                                          </li>
-                                                      </ul>
-                                                  </div>
-                                              </div>
-                                          </div>
-
-                                          <div class="card">
-                                              <div id="proSkill" class="card-header">
-                                                  <h2>
-                                                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                                                          <i class="fas fa-circle"></i>Professional Skill
-                                                      </button>
-                                                  </h2>
-                                              </div>
-
-                                              <div id="collapse2" class="collapse" aria-labelledby="proSkill" data-parent="#accordionSkill">
-                                                  <div class="card-body">
-                                                      <ul class="pro-skill">
-                                                          <li>
-                                                              <div class="skill-title">
-                                                                  <span>Graphic Design</span>
-                                                              </div>
-                                                              <div class="progress">
-                                                                  <div class="progress-bar" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100" style="width: 98%"></div>
-                                                              </div>
-                                                          </li>
-                                                          <li>
-                                                              <div class="skill-title">
-                                                                  <span>HTML & CSS</span>
-                                                              </div>
-                                                              <div class="progress">
-                                                                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%"></div>
-                                                              </div>
-                                                          </li>
-                                                          <li>
-                                                              <div class="skill-title">
-                                                                  <span>JavaScript</span>
-                                                              </div>
-                                                              <div class="progress">
-                                                                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
-                                                              </div>
-                                                          </li>
-                                                          <li>
-                                                              <div class="skill-title">
-                                                                  <span>PHP</span>
-                                                              </div>
-                                                              <div class="progress">
-                                                                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
-                                                              </div>
-                                                          </li>
-                                                          <li>
-                                                              <div class="skill-title">
-                                                                  <span>Photography</span>
-                                                              </div>
-                                                              <div class="progress">
-                                                                  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%"></div>
-                                                              </div>
-                                                          </li>
-                                                      </ul>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <!-- end my skill -->
-                  </div>
-              </div>                
+        <div class="box-content">
+          <div class="section-title">
+            <h3>My Resume</h3>
           </div>
+          <div class="owl-carousel owl-theme">
+            <div class="content">
+              <!-- my experience -->
+              <div class="row">
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                  <div class="content-left">
+                    <div class="title-resume">
+                      <h3>{{experiences.type}}</h3>
+                      <h2>{{experiences.desc}}</h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                  <div class="content-right">
+                    <ul class="timeline">
+                      {% for work in experiences.exprence.all %}
+                      <li>
+                        <h4>{{work.in_name}}</h4>
+                        <span>{{work.position}} ({{work.date}})</span>
+                      </li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- end my experience -->
+            </div>
+            <div class="content">
+              <!-- my education -->
+              <div class="row">
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                  <div class="content-left">
+                    <div class="title-resume">
+                      <h3>{{educations.type}}</h3>
+                      <h2>{{educations.desc}}</h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                  <div class="content-right">
+                    <ul class="timeline">
+                      {% for work in educations.exprence.all %}
+                      <li>
+                        <h4>{{work.in_name}}</h4>
+                        <span>{{work.position}} ({{work.date}})</span>
+                      </li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- end my education -->
+            </div>
+            <div class="content">
+              <!-- my skill -->
+              <div class="my-skill">
+                <div class="row">
+                  <div class="col-md-6 col-sm-12 col-xs-12">
+                    <div class="content-left">
+                      <div class="title-resume">
+                        <h3>{{skills.title}}</h3>
+                        <h2>
+                          {{skills.desc}}
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-12 col-xs-12">
+                    <div class="content-right">
+                      <div id="accordionSkill" class="accordion">
+                        
+
+                      {% for work in skills.skill.type.all %}
+                      <div class="card">
+                        <div id="personalSkill" class="card-header">
+                          <h2>
+                            <button
+                              class="btn btn-link"
+                              type="button"
+                              data-toggle="collapse"
+                              data-target="#collapse1"
+                              aria-expanded="true"
+                              aria-controls="collapse1"
+                            >
+                              <i class="fas fa-circle"></i>{{work.type}}
+                            </button>
+                          </h2>
+                        </div>
+
+                        <div
+                          id="collapse1"
+                          class="collapse collapse-show"
+                          aria-labelledby="personalSkill"
+                          data-parent="#accordionSkill"
+                        >
+                          <div class="card-body">
+                            <ul class="personalSkill">
+                              <li>
+                                <div class="skill-title">
+                                  <span>Creativity</span>
+                                </div>
+                                <div class="progress">
+                                  <div
+                                    class="progress-bar"
+                                    role="progressbar"
+                                    aria-valuenow="85"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                    style="width: 85%"
+                                  ></div>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="skill-title">
+                                  <span>Innovation</span>
+                                </div>
+                                <div class="progress">
+                                  <div
+                                    class="progress-bar"
+                                    role="progressbar"
+                                    aria-valuenow="80"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                    style="width: 80%"
+                                  ></div>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="skill-title">
+                                  <span>Communication</span>
+                                </div>
+                                <div class="progress">
+                                  <div
+                                    class="progress-bar"
+                                    role="progressbar"
+                                    aria-valuenow="90"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                    style="width: 90%"
+                                  ></div>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="skill-title">
+                                  <span>Teamwork</span>
+                                </div>
+                                <div class="progress">
+                                  <div
+                                    class="progress-bar"
+                                    role="progressbar"
+                                    aria-valuenow="95"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                    style="width: 95%"
+                                  ></div>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      {% endfor %}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end my skill -->
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- end resume -->
@@ -339,8 +321,14 @@
               data-category="3"
             >
               <div class="content-image">
-                <a href="{% static '/post/images/portfolio1.jpg' %}" class="portfolio-popup">
-                  <img src="{% static '/post/images/portfolio1.jpg' %}" alt="" />
+                <a
+                  href="{% static '/post/images/portfolio1.jpg' %}"
+                  class="portfolio-popup"
+                >
+                  <img
+                    src="{% static '/post/images/portfolio1.jpg' %}"
+                    alt=""
+                  />
                   <div class="image-overlay"></div>
                   <div class="portfolio-caption">
                     <div class="title">
@@ -358,8 +346,14 @@
               data-category="1"
             >
               <div class="content-image">
-                <a href="{% static '/post/images/portfolio2.jpg' %}" class="portfolio-popup">
-                  <img src="{% static '/post/images/portfolio2.jpg' %}" alt="" />
+                <a
+                  href="{% static '/post/images/portfolio2.jpg' %}"
+                  class="portfolio-popup"
+                >
+                  <img
+                    src="{% static '/post/images/portfolio2.jpg' %}"
+                    alt=""
+                  />
                   <div class="image-overlay"></div>
                   <div class="portfolio-caption">
                     <div class="title">
@@ -377,8 +371,14 @@
               data-category="2, 1"
             >
               <div class="content-image">
-                <a href="{% static '/post/images/portfolio3.jpg' %}" class="portfolio-popup">
-                  <img src="{% static '/post/images/portfolio3.jpg' %}" alt="" />
+                <a
+                  href="{% static '/post/images/portfolio3.jpg' %}"
+                  class="portfolio-popup"
+                >
+                  <img
+                    src="{% static '/post/images/portfolio3.jpg' %}"
+                    alt=""
+                  />
                   <div class="image-overlay"></div>
                   <div class="portfolio-caption">
                     <div class="title">
@@ -396,8 +396,14 @@
               data-category="3"
             >
               <div class="content-image">
-                <a href="{% static '/post/images/portfolio4.jpg' %}" class="portfolio-popup">
-                  <img src="{% static '/post/images/portfolio4.jpg' %}" alt="" />
+                <a
+                  href="{% static '/post/images/portfolio4.jpg' %}"
+                  class="portfolio-popup"
+                >
+                  <img
+                    src="{% static '/post/images/portfolio4.jpg' %}"
+                    alt=""
+                  />
                   <div class="image-overlay"></div>
                   <div class="portfolio-caption">
                     <div class="title">
@@ -415,8 +421,14 @@
               data-category="1, 2"
             >
               <div class="content-image">
-                <a href="{% static '/post/images/portfolio5.jpg' %}" class="portfolio-popup">
-                  <img src="{% static '/post/images/portfolio5.jpg' %}" alt="" />
+                <a
+                  href="{% static '/post/images/portfolio5.jpg' %}"
+                  class="portfolio-popup"
+                >
+                  <img
+                    src="{% static '/post/images/portfolio5.jpg' %}"
+                    alt=""
+                  />
                   <div class="image-overlay"></div>
                   <div class="portfolio-caption">
                     <div class="title">
@@ -434,8 +446,14 @@
               data-category="3, 1"
             >
               <div class="content-image">
-                <a href="{% static '/post/images/portfolio6.jpg' %}" class="portfolio-popup">
-                  <img src="{% static '/post/images/portfolio6.jpg' %}" alt="" />
+                <a
+                  href="{% static '/post/images/portfolio6.jpg' %}"
+                  class="portfolio-popup"
+                >
+                  <img
+                    src="{% static '/post/images/portfolio6.jpg' %}"
+                    alt=""
+                  />
                   <div class="image-overlay"></div>
                   <div class="portfolio-caption">
                     <div class="title">
@@ -469,9 +487,7 @@
               </div>
               <div class="blog-title">
                 <h4>
-                  <a href="#"
-                    >{{blog.title}}</a
-                  >
+                  <a href="#">{{blog.title}}</a>
                 </h4>
                 <div class="date">
                   {{blog.date}} <i class="fas fa-circle"></i>
@@ -481,8 +497,6 @@
             </div>
           </div>
           {% endfor %}
-          
-          
         </div>
       </div>
     </div>
