@@ -21,3 +21,26 @@ class Blog(models.Model):
     type=models.CharField(max_length=20)
     def __str__(self):
         return f"{self.type}"
+    
+class ExperienceandEducation(models.Model):
+    TYPE_CHOICES=(
+        ("Education","Education"),
+        ("Experience","Experience")
+    )
+    type = models.CharField(max_length=40 ,choices=TYPE_CHOICES)
+    in_name=models.CharField(max_length=20)
+    position=models.CharField(max_length=20)
+    date=models.CharField(max_length=15)
+    def __str__(self):
+        return f"{self.type}"
+    
+class ExperienceandEducationResume(models.Model):
+    TYPE_CHOICES=(
+        ("EDUCATION","EDUCATION"),
+        ("EXPRTIENCE","EXPRTIENCE")
+    )
+    type= models.CharField(max_length=40,choices=TYPE_CHOICES)
+    desc=models.TextField()
+    exprence=models.ManyToManyField(ExperienceandEducation)
+    def __str__(self):
+        return f"{self.type}"
